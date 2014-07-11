@@ -56,7 +56,7 @@ class MY_Session extends CI_Session {
 		else
 		{
 			// if encryption is not used, we provide an md5 hash to prevent userside tampering
-			$cookie_data = $cookie_data.md5($cookie_data.$this->encryption_key);
+			$cookie_data .= hash_hmac('sha1', $cookie_data, $this->encryption_key);
 		}
 
 		// Set the cookie
