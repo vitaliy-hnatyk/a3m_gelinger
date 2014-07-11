@@ -100,10 +100,16 @@ class Manage_permissions extends CI_Controller {
       redirect('account/sign_in/?continue='.urlencode(base_url().'account/manage_permissions'));
     }
 
-    // Redirect unauthorized users to account profile page
-    if ( ! $this->authorization->is_permitted('retrieve_permissions'))
+    // Check if they are allowed to Update Users
+    if ( ! $this->authorization->is_permitted('update_permissions') && ! empty($id) )
     {
-      redirect('account/account_profile');
+      redirect('account/manage_permissions');
+    }
+
+    // Check if they are allowed to Create Users
+    if ( ! $this->authorization->is_permitted('create_permissions') && empty($id) )
+    {
+      redirect('account/manage_permissions');
     }
 
     // Retrieve sign in user

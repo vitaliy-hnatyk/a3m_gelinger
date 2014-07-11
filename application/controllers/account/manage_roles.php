@@ -102,10 +102,16 @@ class Manage_roles extends CI_Controller {
       redirect('account/sign_in/?continue='.urlencode(base_url().'account/manage_roles'));
     }
 
-    // Redirect unauthorized users to account profile page
-    if ( ! $this->authorization->is_permitted('retrieve_roles'))
+    // Check if they are allowed to Update Roles
+    if ( ! $this->authorization->is_permitted('update_roles') && ! empty($id) )
     {
-      redirect('account/account_profile');
+      redirect('account/manage_permissions');
+    }
+
+    // Check if they are allowed to Create Roles
+    if ( ! $this->authorization->is_permitted('create_roles') && empty($id) )
+    {
+      redirect('account/manage_permissions');
     }
 
     // Set action type (create or update role)
