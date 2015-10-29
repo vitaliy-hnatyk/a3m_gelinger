@@ -10,7 +10,11 @@
 		
 		<p>This is the homepage for your web-app. You can use this as a starting point for creating with A3M and building the rest of your site.
 		If you like this project, please help contribute with <b>bug fixes &amp; enhancements</b> on <a href="https://github.com/donjakobo/A3M">GitHub</a>.</p>
-		<p><a class="btn btn-primary btn-large pull-right" href="https://github.com/donjakobo/A3M"><i class="glyphicon glyphicon-wrench"></i> Fork it &raquo;</a> <a class="btn btn-primary btn-large pull-right" href="http://stackoverflow.com/questions/tagged/codeigniter-a3m"><i class="glyphicon glyphicon-comment"></i> Have questions? &raquo;</a></p>
+		<div class="btn-group pull-right" role="group" aria-label="Helpful buttons">
+			<a class="btn btn-default btn-large" href="https://github.com/donjakobo/A3M" title="View on Github"><i class="glyphicon glyphicon-cloud"></i> Fork it </a>
+			<a class="btn btn-info btn-large" href="http://getbootstrap.com/getting-started/" title="Learn how to use it"><i class="glyphicon glyphicon-question-sign"></i> About Bootstrap </a>		
+			<a class="btn btn-primary btn-large" href="http://stackoverflow.com/questions/tagged/codeigniter-a3m" title="Ask a question on Stackoverflow!"><i class="glyphicon glyphicon-comment"></i> Have questions?</a>
+		</div>
 	</div>
     </div>
 </div>
@@ -81,5 +85,4 @@
 	    <code>/<?php echo RES_DIR; ?>/bootstrap/</code>
 	</div>
     </div>
-
 </div>

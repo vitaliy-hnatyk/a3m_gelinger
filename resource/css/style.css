@@ -4,6 +4,10 @@ body {
 	padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 }
 
+.footer {
+	margin-top: 20px;
+}
+
 li.third_party {
     list-style: none;
     margin: 5px;
@@ -45,6 +49,7 @@ input.openid {
     color: white;
 }
 
+/* Fancy ribbon showing version on homepage */
 
 .ribbon-wrapper-green {
   width: 85px;
@@ -52,7 +57,7 @@ input.openid {
   overflow: hidden;
   position: absolute;
   top: -3px;
-  right: -3px;
+  right: 12px;
 }
 
 .ribbon-green {

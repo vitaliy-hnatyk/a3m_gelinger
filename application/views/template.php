@@ -4,16 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
     <title><?php echo isset($title) ? $title.' - '.lang('website_title') : lang('website_title'); ?></title>
+	
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Account Authentication and Authorization">
-    <meta name="author" content="A3M contributors">
+    <meta name="author" content="A3M contributors - Github">
 
     <base href="<?php echo base_url(); ?>"/>
 
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="resource/js/jquery.min.js"><\/script>');</script>
+	<link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico"/>
     <link type="text/css" rel="stylesheet" href="<?php echo base_url(RES_DIR.'/bootstrap/css/bootstrap.min.css'); ?>" />
     <link type="text/css" rel="stylesheet" href="<?php echo base_url(RES_DIR.'/css/style.css'); ?>"/>
     <script src="<?php echo base_url().RES_DIR; ?>/bootstrap/js/bootstrap.min.js"></script>
@@ -30,7 +30,9 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
+
 <?php flush(); ?>
+
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -40,19 +42,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <?php echo anchor('', lang('website_title'), 'class="navbar-brand"'); ?>
+                <?php echo anchor('', lang('website_title'), 'class="navbar-brand "'); ?>
             </div>
             <div class="navbar-collapse collapse">
+			
                 <ul class="nav navbar-nav">
                     <li class="divider-vertical"></li>
                     <li><?php echo anchor('', 'Nav Link 1'); ?></li>
                     <li><?php echo anchor('', 'Nav Link 2'); ?></li>
                 </ul>
+				
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <?php if ($this->authentication->is_signed_in()) : ?>
-                            <i class="glyphicon glyphicon-user"></i> <?php echo $account->username; ?> <b class="caret"></b></a>
+                            <i class="glyphicon glyphicon-user"></i> &nbsp; <?php echo $account->username; ?> <b class="caret"></b></a>
                         <?php else : ?>
                             <i class="glyphicon glyphicon-user"></i> <b class="caret"></b></a>
                         <?php endif; ?>
@@ -99,12 +103,10 @@
         </div>
     </div>
 
-    <div class="clearfix"></div>
-
-    <div class="container">
+    <div class="container footer">
         <div class="row">
             <div class="col-lg-12">
-                <div class="well well-small">
+                <div class="well well-sm">
                     <strong>
                         <small>Copyright &copy; <?php echo date('Y'); ?> <?php echo lang('website_title'); ?></small>
                     </strong>
