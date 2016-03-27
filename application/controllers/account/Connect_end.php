@@ -20,6 +20,13 @@ class Connect_end extends CI_Controller
   function __construct()
   {
     parent::__construct();
+    
+    
+       // Load the necessary stuff...
+        $this->load->helper(array('language', 'account/ssl', 'url'));
+        $this->load->library(array('account/Authentication', 'account/Authorization', 'account/Hybrid_auth_lib'));
+        $this->load->model(array('account/Account_model', 'account/Account_details_model', 'account/Account_providers_model'));
+        $this->load->language(array('general', 'account/connect_third_party'));
   }
 
   /**
