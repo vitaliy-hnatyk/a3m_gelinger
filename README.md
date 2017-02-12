@@ -1,4 +1,4 @@
-A3M for CodeIgniter . UPDATED TO CI 3.0.6
+A3M for CodeIgniter . UPDATED TO CI 3.1.3
 ===
 
 
