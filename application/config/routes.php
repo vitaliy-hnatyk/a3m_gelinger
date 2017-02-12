@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | Please see the user guide for complete details:
 |
-|	http://codeigniter.com/user_guide/general/routing.html
+|	https://codeigniter.com/user_guide/general/routing.html
 |
 | -------------------------------------------------------------------------
 | RESERVED ROUTES
@@ -52,12 +52,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
-$route['sign_up'] = "account/sign_up";
-$route['sign_in'] = "account/sign_in";
-$route['sign_out'] = "account/sign_out";
-$route['login'] = "account/sign_in";
-$route['logout'] = "account/sign_out";
-$route['register'] = "account/sign_up";
-$route['account/connect/(.+)'] = "account/connect/index/$1";
-$route['account/connect_end(:any)'] = "account/connect/index$1";
